@@ -9,4 +9,27 @@ import { Component } from '@angular/core';
 })
 export class GamesComponent {
 
+ calculators = [
+    {
+      key: 'AC',
+      value: 'AC',
+      type: 'operator'
+    },
+    {
+      key: 'negative-positive',
+      value: '+/-',
+      type: 'operator',
+    }, 
+    {
+      key: 'percentage',
+      value: '%',
+      type: 'operator',
+    },
+    {
+      key: 'divide',
+      value: '%',
+      type: 'operator',
+    }
+  ]
+
 }
