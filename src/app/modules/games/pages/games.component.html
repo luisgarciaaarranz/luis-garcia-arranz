@@ -1,11 +1,11 @@
 
 <div class="row">
     <div class="col-12">
-        Total: 
+        Total: {{numberAccumulator}}
     </div>
     @for(i of calculators; track i) {
         <div class="col-3">
-            {{i.value}}
+            <button mat-button (click)="getOnClickButton(i)">{{i.value}}</button>
         </div>
     }
 </div>
