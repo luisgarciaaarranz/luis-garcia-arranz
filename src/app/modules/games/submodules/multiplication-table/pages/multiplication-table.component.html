@@ -1,0 +1,16 @@
+<mat-card class="mt-5">
+    <mat-card-content>
+        <h3>Tabla de multiplicar</h3>
+        <button type="button" class="btn btn-primary" (click)="generateTable()">Generar tabla</button>
+       @if(showTable) {
+        <mat-list role="list">
+            <h4>Tabla de multiplicar del 1</h4>
+            @for(item of items;  track item) {
+                <mat-list-item>1 * {{item}} = {{getValue(item)}}</mat-list-item>
+            }
+            
+          </mat-list>
+       }
+       
+    </mat-card-content>
+</mat-card>
