@@ -1,0 +1,22 @@
+.calculator {
+    border: 1px solid gray;
+    .total {
+       border-bottom: 1px solid gray; 
+    }
+    .operators {
+        text-align: center;
+        padding: 1px;
+        button {
+            width: 100% !important;
+            
+        }
+        .operator {
+            background-color: red;
+            color: white;
+        }
+        .number {
+            background-color: grey;
+            color: white;
+        }
+    }
+}

@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './games.component.html',
   styleUrl: './games.component.scss'
 })
@@ -50,6 +51,47 @@ export class GamesComponent {
     value: '+',
     type: 'operator',
   },
+{
+  key: 'one',
+  value: '4',
+  type: 'number',
+},
+{
+  key: 'one',
+  value: '5',
+  type: 'number',
+},
+{
+  key: 'one',
+  value: '6',
+  type: 'number',
+},
+{
+  key: 'plus',
+  value: '-',
+  type: 'operator',
+},
+{
+
+  key: 'one',
+  value: '7',
+  type: 'number',
+},
+{
+  key: 'one',
+  value: '8',
+  type: 'number',
+},
+{
+  key: 'one',
+  value: '9',
+  type: 'number',
+},
+{
+  key: 'plus',
+  value: '*',
+  type: 'operator',
+},
   {
     key: 'equal',
     value: '=',

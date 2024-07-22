@@ -1,11 +1,11 @@
 
-<div class="row">
-    <div class="col-12">
+<div class="row calculator">
+    <div class="col-12 total">
         Total: {{numberAccumulator}}
     </div>
     @for(i of calculators; track i) {
-        <div class="col-3">
-            <button mat-button (click)="getOnClickButton(i)">{{i.value}}</button>
+        <div class="col-3 operators">
+            <button [ngClass]="{'operator': i.type === 'operator', 'number': i.type === 'number'}" mat-button (click)="getOnClickButton(i)">{{i.value}}</button>
         </div>
     }
 </div>
