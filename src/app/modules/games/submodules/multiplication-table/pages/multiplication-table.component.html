@@ -1,15 +1,35 @@
 <mat-card class="mt-5">
     <mat-card-content>
         <h3>Tabla de multiplicar</h3>
-        <input matInput class="multiplication-value" [(ngModel)]="multiplicatorValue"> <button type="button" class="btn btn-primary ml-2" (click)="generateTable()">Generar tabla</button>
+        <input matInput class="multiplication-value" [(ngModel)]="multiplicatorValue"> 
+        @if(showTable) {
+            <button type="button" class="btn btn-primary" (click)="generateTable()">Ocultar tabla</button>
+        } @else {
+            <button type="button" class="btn btn-primary" (click)="generateTable()">Generar tabla</button>
+        }
+               
+        <button type="button" class="btn btn-primary" (click)="generateAllTables()">Todas las tablas</button>
        @if(showTable) {
         <mat-list role="list">
-            <h4>Tabla de multiplicar del {{multiplicatorValue}}</h4>
+            <h5>Tabla de multiplicar del {{multiplicatorValue}}</h5>
             @for(item of items;  track item) {
                 <mat-list-item>{{multiplicatorValue}} * {{item}} = {{getValue(item)}}</mat-list-item>
-            }
-            
+            }            
           </mat-list>
+       }
+       @if(showTables) {
+        <div class="row">
+        @for(item of items; track item) {
+            <div class="col-2">
+                <mat-list role="list">
+                    <h5>Tabla de multiplicar del {{item}}</h5>
+                    @for(subItem of items;  track subItem) {
+                        <mat-list-item>{{item}} * {{subItem}} = {{getValue(item, subItem)}}</mat-list-item>
+                    }            
+                  </mat-list>
+            </div>            
+        }</div>
+       
        }
        
     </mat-card-content>

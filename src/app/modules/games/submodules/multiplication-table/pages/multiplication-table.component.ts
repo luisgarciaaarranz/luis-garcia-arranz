@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list'
 export class MultiplicationTableComponent {
 
   showTable: boolean = false;
+  showTables: boolean = false;
 
   multiplicatorValue: number = 0;
 
@@ -23,8 +24,16 @@ export class MultiplicationTableComponent {
     this.showTable = !this.showTable
   }
 
-  public getValue(item: number): number {
+  public getValue(item: number, subItem?: number): number {
+    if(this.showTables) {
+      return subItem!*item
+    } 
     return this.multiplicatorValue*item
+    
+  }
+
+  public generateAllTables() {
+    this.showTables = !this.showTables
   }
 
 }
