@@ -1,0 +1,16 @@
+<mat-card class="mt-2">
+    <mat-card-content>
+        <h3>Tres en raya</h3>
+        <h4>Turno del jugador {{playersTurn}}</h4>
+        <div class="player-one">Jugador 1</div>
+        <div class="player-two">Jugador 2</div>
+        @for(row of positions; track index) {
+            <div class="row d-flex justify-content-center">
+                @for(item of row; track trackByPosition) {
+                    <div class="col-3 cells" [ngStyle]="item.color" (click)="getOnClickButton(item)"></div>
+                }
+            </div>
+        }
+       
+    </mat-card-content>
+</mat-card>

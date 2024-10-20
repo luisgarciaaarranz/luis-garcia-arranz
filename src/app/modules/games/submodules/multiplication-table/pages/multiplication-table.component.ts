@@ -33,6 +33,8 @@ export class MultiplicationTableComponent {
   }
 
   public generateAllTables() {
+    this.showTable = false;
+    this.multiplicatorValue = 0;
     this.showTables = !this.showTables
   }
 

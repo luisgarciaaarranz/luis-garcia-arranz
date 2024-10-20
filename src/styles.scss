@@ -37,7 +37,16 @@ $cv-lga-theme: mat.define-theme((
 /* You can add global styles to this file, and also import other style files */
 body {
     margin: 1%;
-    padding: 0.5px 
+    padding: 0.5px;
+    padding-top: 70px
 }
 //html, body { height: 100%; }
-body { margin: 1%;  font-family: Roboto, "Helvetica Neue", sans-serif;  background-color: rgb(234, 230, 230);}
+body { margin: 1%;  
+  font-family: Roboto, 
+  "Helvetica Neue", sans-serif;  
+  background-color: rgb(234, 230, 230);}
+
+
+.navbar-nav .nav-link {
+  cursor: pointer;  /* Esto hará que el cursor sea "pointer" */
+}

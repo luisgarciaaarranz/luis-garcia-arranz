@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { GamesComponent } from './pages/games.component';
 
 const routes: Routes = [{
-  path: '',
-  component: GamesComponent,
+ path: 'three-in-a-row',
+ loadComponent: () => import('./submodules/three-in-a-row/pages/three-in-a-row.component').then(m => m.ThreeInARowComponent)
 }];
 
 @NgModule({
