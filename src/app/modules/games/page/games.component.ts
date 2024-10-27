@@ -23,6 +23,7 @@ export class GamesComponent {
     title: "Calculadora",
   }]
 
+  
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   goToRoute(route: string) {
