@@ -3,6 +3,6 @@
 ## Run proyect
 
     After clone project:
-    `npm install`
-    `ng serve`
+    npm install
+    ng serve
 
