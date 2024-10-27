@@ -1,0 +1,24 @@
+.card {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #198754;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #198754;
+    border: 1px solid white;
+    color: white;
+}
+
+.img {
+    width: 100%;    /* Ajusta la imagen al ancho completo del div .card */
+    height: 150px;  /* Altura fija para el div contenedor */
+    overflow: hidden; /* Esconde el exceso de imagen si se desborda */
+    img {
+        width: 100%;    /* Ajusta la imagen al ancho del contenedor */
+        height: 100%;   /* Ajusta la imagen a la altura del contenedor */
+        object-fit: cover; /* Hace que la imagen cubra el área, recortando si es necesario */
+    }
+}

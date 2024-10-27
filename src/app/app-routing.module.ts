@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GamesModule } from './modules/games/games.module';
 
 const routes: Routes = [
   {
@@ -8,8 +7,16 @@ const routes: Routes = [
     loadComponent: () => import('./modules/home/pages/home.component').then(m => m.HomeComponent)
   },
   {
+    path: 'about-me',
+    loadComponent: () => import('./modules/about-me/page/about-me.component').then(m => m.AboutMeComponent)
+  },
+  {
     path: 'games',
-    loadComponent: () => import('./modules/games/pages/games.component').then(m => m.GamesComponent)
+    loadChildren: () => import('./modules/games/games.module').then(m => m.GamesModule)
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./modules/contact/page/contact.component').then(m => m.ContactComponent)
   },
 ];
 

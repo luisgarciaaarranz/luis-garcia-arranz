@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { GamesComponent } from './page/games.component';
 import { GamesRoutingModule } from './games-routing.module';
-import { GamesComponent } from './pages/games.component';
-
-
+import { GameCardComponent } from "./components/game-card/game-card.component";
 
 @NgModule({
   declarations: [
+    GamesComponent, 
+    
   ],
   imports: [
-    CommonModule,
-    GamesRoutingModule
-  ],
+    GamesRoutingModule,
+    GameCardComponent
+],
 })
 export class GamesModule { }

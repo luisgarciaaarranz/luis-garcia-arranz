@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+   
+    <div class="row">
+        <div class="col-12">
+            <h1>¿Hablamos?</h1>
+        </div>
+        <div class="col-12 mt-2">
+            <span>Nombre* </span>
+            <mat-form-field>
+                <input
+                  matInput
+                  required
+                />
+              </mat-form-field>
+        </div>
+        <div class="col-12 contact-element mt-2">
+            <span>Email* </span>
+            <mat-form-field>
+                <input
+                  matInput
+                  [formControl]="email"
+                  (blur)="updateErrorMessage()"
+                  required
+                />
+                @if (email.invalid) {
+                  <mat-error>{{errorMessage()}}</mat-error>
+                }
+              </mat-form-field>
+        </div>
+        <div class="col-12 mt-2">
+            <mat-label>Mensaje</mat-label>
+            <mat-form-field >
+                <textarea matInput placeholder=""></textarea>
+              </mat-form-field>
+        </div>
+    </div>
+    
+    
+    
+</div>
+
+
