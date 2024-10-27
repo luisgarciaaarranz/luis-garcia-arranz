@@ -9,21 +9,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GamesComponent {
 
-  gamesList: {game: string, title: string, imageRoute: string
+  gamesList: {game: string, title: string
   }[] = [
     {
       game: "multiplication-table",
       title: "Tabla de multiplicar",
-      imageRoute: "../../../../../assets/images/multiplication-table.png"
     }, {
     game: "three-in-a-row",
     title: "Tres en raya",
-    imageRoute: "../../../../../assets/images/three-in-a-row.png"
   }, 
   {
     game: "calculator",
     title: "Calculadora",
-    imageRoute: "../../../../../assets/images/calculator.png"
   }]
 
   constructor(private router: Router, private route: ActivatedRoute) {}
