@@ -1,9 +1,0 @@
-<div class="row">
-    @for(game of gamesList; track game) {
-        <div class="col-4">
-            <app-game-card [title]="game.title" [route]="game.game" 
-            (goRoute)="goToRoute($event)"></app-game-card>
-        </div>
-    }
-</div>
-

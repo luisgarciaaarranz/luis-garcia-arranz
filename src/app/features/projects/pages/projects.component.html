@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <h1>
+            Mis proyectos
+        </h1>
+    </div>
+    
+
+    <section class="row">
+        @for (project of projects; track $index) {
+            <div class="col-6 mt-2">
+                <app-cards [project]="project"></app-cards>
+            </div>
+        }
+       
+        
+    </section>
+ 
+    
+</div>
+
