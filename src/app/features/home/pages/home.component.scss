@@ -5,3 +5,19 @@
     height: .5rem;
     margin: .75rem 0 .75rem 0;
 }
+
+.home {
+    min-height: 80rem;
+    position: relative;
+}
+
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.text {
+    text-align: center !important;
+}
