@@ -11,6 +11,10 @@ const routes: Routes = [
     loadComponent: () => import('./features/about-me/page/about-me.component').then(m => m.AboutMeComponent)
   },
   {
+    path: 'experience',
+    loadComponent: () => import('./features/experience/experience.component').then(m => m.ExperienceComponent)
+  },
+  {
     path: 'projects',
     loadComponent: () => import('./features/projects/pages/projects.component').then(m => m.ProjectsComponent)
   },
