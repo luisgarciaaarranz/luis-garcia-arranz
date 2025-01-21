@@ -18,11 +18,6 @@ export class HomeComponent {
   @ViewChild('container', { static: true }) container!: ElementRef;
   currentSection = 0;
 
-  sections = [
-    { title: 'Section 1', color: '#1abc9c' },
-    { title: 'Section 2', color: '#3498db' },
-    { title: 'Section 3', color: '#9b59b6' }
-  ];
 
 
   constructor(private router: Router, private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {

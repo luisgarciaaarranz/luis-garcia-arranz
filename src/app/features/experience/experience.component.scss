@@ -1,0 +1,15 @@
+@import url(./../../app.component.scss);
+
+.text-experience {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.text-experience p {
+    margin-bottom: 16px; /* Espacio entre párrafos */
+  }
+  
+  .text-experience strong {
+    font-weight: bold;
+    color: #2c3e50; /* Resalta los títulos */
+  }
