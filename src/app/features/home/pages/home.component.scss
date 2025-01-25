@@ -39,12 +39,17 @@ overflow-x: hidden;}
    flex-direction: column;
 }
 
-.section {
+section {
+    position: relative;
    // scroll-snap-align: start;
-    height: 100vh;
+    margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     transition: backround-color 0.5s ease;
+}
+
+.card {
+    width: 100%;
 }
