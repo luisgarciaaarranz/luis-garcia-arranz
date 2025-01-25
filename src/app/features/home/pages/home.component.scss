@@ -48,8 +48,36 @@ section {
     justify-content: center;
     font-size: 2rem;
     transition: backround-color 0.5s ease;
+    .card {
+        width: 100%;
+        
+    }
+    .about {
+        background-color: #198754;
+        color: white;
+        button {
+            background-color: white;
+            color: #198754;
+        }
+    }
+    .experience {
+        background-color: #198754;
+        color: white;
+        button {
+            background-color: white;
+            color: #198754;
+        }
+    }
+    .project {
+        background-color: #198754;
+        color: white;
+        button {
+            background-color: white;
+            color: #198754;
+        }
+    }
 }
 
-.card {
-    width: 100%;
-}
+
+
+

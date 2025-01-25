@@ -3,12 +3,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule, MatIconRegistry} from '@angular/material/icon'
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ContactComponent } from '../../contact/page/contact.component';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule],
+  imports: [MatButtonModule, MatIconModule, ContactComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
