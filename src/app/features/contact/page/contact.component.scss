@@ -6,7 +6,15 @@ span{
 
 mat-label {
     display: block;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: left;
 }
+
+
 
 .contact-element {
     margin-top: 14px;
@@ -14,5 +22,5 @@ mat-label {
 
 
 mat-form-field {
-    width: 50%;
+    width: 100%;
 }

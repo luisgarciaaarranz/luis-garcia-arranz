@@ -79,5 +79,52 @@ section {
 }
 
 
-
-
+/* Efecto de escritura para el h1 */
+.typing-heading {
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white; /* Cursor parpadeante */
+    width: 0;
+    margin: 0;
+    animation: typing-heading 3s steps(30, end) forwards, blink 0.6s step-end infinite;
+  }
+  
+  /* Efecto de escritura para el párrafo */
+  .typing-paragraph {
+    font-size: 1.2rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white; /* Cursor parpadeante */
+    width: 0;
+    margin: 0;
+    animation: typing-paragraph 4s steps(40, end) forwards, blink 0.6s step-end infinite;
+    animation-delay: 3.2s; /* Retraso después del h1 */
+  }
+  
+  /* Animación del efecto de escritura */
+  @keyframes typing-heading {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes typing-paragraph {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Animación del parpadeo del cursor */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }

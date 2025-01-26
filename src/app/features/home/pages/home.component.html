@@ -7,9 +7,8 @@
           <div class="container centered-content">
         
             <div class="text">
-              <h1>Hola, Soy Luis García Arranz</h1>
-              <p>Desarrollador y gestor web</p>
-              <button class="btn btn-success" (click)="goTo('about-me')">Sobre mí</button>
+              <h1 class="typing-heading">Hola, Soy Luis García Arranz</h1>
+              <p class="typing-paragraph">Desarrollador y gestor web</p>
             </div>
           </div>
         </div>
@@ -21,11 +20,7 @@
         <div class="card-body">
           <div class="container centered-content">
         
-            <div class="text">
-              <h1>Última experiencia laboral</h1>
-              <p>Desarrollador y gestor web</p>
-              <button class="btn btn-success" (click)="goTo('experience')">Experiencia laboral</button>
-            </div>
+            <app-about-me></app-about-me>
           </div>
         </div>
      
@@ -35,12 +30,8 @@
     <div class="card project">
         <div class="card-body">
           <div class="container centered-content">
-        
-            <div class="text">
-              <h1>Últimos proyectos</h1>
-              <p>Desarrollador y gestor web</p>
-              <button class="btn btn-success" (click)="goTo('projects')">Proyectos</button>
-            </div>
+             
+              <app-experience></app-experience>
           </div>
         </div>
      

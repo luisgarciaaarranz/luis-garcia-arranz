@@ -5,7 +5,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [MatStepperModule,MatButtonModule],
+  imports: [],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
