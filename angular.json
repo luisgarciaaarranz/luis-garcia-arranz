@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "luis-garcia-arranz": {
+    "cv-lga": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/luis-garcia-arranz",
+            "outputPath": "dist/cv-lga",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -36,8 +36,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "/luis-garcia-arranz/"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -76,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "luis-garcia-arranz:build:production"
+              "browserTarget": "cv-lga:build:production"
             },
             "development": {
-              "browserTarget": "luis-garcia-arranz:build:development"
+              "browserTarget": "cv-lga:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "luis-garcia-arranz:build"
+            "browserTarget": "cv-lga:build"
           }
         },
         "test": {
@@ -111,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "luis-garcia-arranz"
+  "defaultProject": "cv-lga"
 }
