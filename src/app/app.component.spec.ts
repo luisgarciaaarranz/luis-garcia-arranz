@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cv-lga'`, () => {
+  it(`should have as title 'luis-garcia-arranz'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cv-lga');
+    expect(app.title).toEqual('luis-garcia-arranz');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('cv-lga app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('luis-garcia-arranz app is running!');
   });
 });
