@@ -7,45 +7,49 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  activeSection: string = 'about';
+  activeSection: string = 'home';
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    this.observeSections();
     this.scrollToInitialSection();
+    window.addEventListener('scroll', this.onScroll.bind(this));
   }
 
   scrollTo(section: string): void {
     const element = document.getElementById(section);
+    this.activeSection = section;
+    
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const yOffset = -90; // Ajusta este valor según la altura de tu navbar
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+  
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      
       history.pushState(null, '', `/${section}`);
     }
   }
 
   private scrollToInitialSection(): void {
-    const currentPath = this.router.url.replace('/', ''); // Obtiene la URL sin "/"
+    const currentPath = this.router.url.replace('/', '').trim();
     if (currentPath) {
-      setTimeout(() => this.scrollTo(currentPath), 100); // Espera un poco para que Angular termine de renderizar
+      setTimeout(() => this.scrollTo(currentPath), 200); // Asegurar que Angular renderiza antes del scroll
     }
   }
 
-  private observeSections(): void {
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.getAttribute('id') || 'about';
-            this.activeSection = sectionId;
-            history.replaceState(null, '', `/${sectionId}`);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    sections.forEach((section) => observer.observe(section));
+  onScroll(): void {
+    const sections = ['home', 'about', 'experience', 'contact'];
+  
+    for (let section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+          this.activeSection = section;
+          history.replaceState(null, '', `/${section}`);
+        }
+      }
+    }
   }
+
 }

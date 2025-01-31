@@ -6,9 +6,6 @@
     margin: .75rem 0 .75rem 0;
 }
 
-.home {
-    position: relative;
-}
 
 .centered-content {
     display: flex;
@@ -39,9 +36,14 @@ overflow-x: hidden;}
    flex-direction: column;
 }
 
+#home {
+  position: relative;
+}
+
 section {
     position: relative;
-   // scroll-snap-align: start;
+    scroll-margin-top: 90px; // Ajusta según la altura del navbar
+  padding-top: 90px; // Asegura que haya espacio debajo del navbar
     margin: 1rem;
     display: flex;
     align-items: center;
@@ -52,23 +54,17 @@ section {
         width: 100%;
         
     }
-    .about {
-        background-color: #198754;
-        color: white;
+    .about, .contact {
+        background-color: white;
+        //color: white;
         button {
             background-color: white;
             color: #198754;
         }
     }
-    .experience {
-        background-color: #198754;
-        color: white;
-        button {
-            background-color: white;
-            color: #198754;
-        }
-    }
-    .project {
+   
+  
+    .experience, .home-content{
         background-color: #198754;
         color: white;
         button {

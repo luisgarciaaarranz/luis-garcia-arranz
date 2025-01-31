@@ -6,23 +6,31 @@ nav{
     box-shadow: 0 10px 100px rgba(0,0,0,0.1);
 }
 
+img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+  margin-right: 1.5rem;
+  border-color: #28a745;
+  border: 1px;
+}
 
 .content {
     padding: 1rem 5rem
 }
 
 .navbar-nav .nav-link.active {
-    font-weight: bold;
-    color: #28a745 !important; /* Color verde */
-    border-bottom: 2px solid #28a745;
-  }
-  
-  .btn-outline-success.active {
-    background-color: #28a745;
-    color: white;
-    border: 2px solid #28a745;
-  }
-  
-  .navbar-brand {
-    cursor: pointer !important;
-  }
+  font-weight: bold;
+  color: #28a745 !important; /* Color verde */
+  border-bottom: 2px solid #28a745;
+}
+
+.btn-outline-success.active {
+  background-color: #28a745;
+  color: white;
+  border: 2px solid #28a745;
+}
+
+.navbar-brand {
+  cursor: pointer !important;
+}
