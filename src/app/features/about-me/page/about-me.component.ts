@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class AboutMeComponent {
 
+  skillsList: string[] = ['HTML', 'CSS', 'ANGULAR', 'JASMIN', 'KARMA', 'GOLAND', '.NET', 'JAVA', 'POSTGESQL', 'MONGO', 'GITHUB', 'JIRA', 'GOOGLE CLOUD']
+
   constructor(private router: Router) {}
 
   goTo() {

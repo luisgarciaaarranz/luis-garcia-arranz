@@ -13,3 +13,25 @@ p {
     margin-bottom: 16px; /* Espacio entre párrafos */
     font-size: 1rem;
   }
+
+.skills-title {
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    
+}
+.skills {
+    display: flex;
+        flex-wrap: wrap;
+    .skill {
+        padding: 1rem 2rem;
+        margin-bottom: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 1rem;
+        background: rgba(153, 153, 153, 0.2);
+        border-radius: 5px;
+        font-weight: 600;
+        background-color: #198754;
+        color: white;
+    }
+}

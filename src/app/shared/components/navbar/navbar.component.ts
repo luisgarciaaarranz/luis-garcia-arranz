@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ScrollService } from 'src/app/core/services/scroll.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   activeSection: string = 'home';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private scroll: ScrollService, private router: Router) {}
 
   ngOnInit(): void {
     this.scrollToInitialSection();
@@ -17,17 +18,7 @@ export class NavbarComponent implements OnInit {
   }
 
   scrollTo(section: string): void {
-    const element = document.getElementById(section);
-    this.activeSection = section;
-    
-    if (element) {
-      const yOffset = -90; // Ajusta este valor según la altura de tu navbar
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-  
-      window.scrollTo({ top: y, behavior: 'smooth' });
-      
-      history.pushState(null, '', `/${section}`);
-    }
+    this.scroll.scrollTo(section);
   }
 
   private scrollToInitialSection(): void {

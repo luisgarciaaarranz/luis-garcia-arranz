@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ContactComponent } from '../../contact/page/contact.component';
 import { ExperienceComponent } from '../../experience/experience.component';
 import { AboutMeComponent } from '../../about-me/page/about-me.component';
+import { ScrollService } from 'src/app/core/services/scroll.service';
 
 
 @Component({
@@ -22,12 +23,12 @@ export class HomeComponent {
 
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private scroll: ScrollService) {
 
   }
 
   goTo(route: string) {
-    this.router.navigate([route], );
+    this.scroll.scrollTo(route)
   }
 
 

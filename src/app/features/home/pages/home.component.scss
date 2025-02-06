@@ -16,6 +16,11 @@
 
 .text {
     text-align: center !important;
+    button {
+      width: 14rem;
+      height: 3rem;
+      font-size: 1.3rem;
+    }
 }
 
 :host {
@@ -42,8 +47,8 @@ overflow-x: hidden;}
 
 section {
     position: relative;
-    scroll-margin-top: 90px; // Ajusta según la altura del navbar
-  padding-top: 90px; // Asegura que haya espacio debajo del navbar
+    scroll-margin-top: 10px; // Ajusta según la altura del navbar
+  padding-top: 10px; // Asegura que haya espacio debajo del navbar
     margin: 1rem;
     display: flex;
     align-items: center;
@@ -74,6 +79,27 @@ section {
     }
 }
 
+.socials {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: .5rem;
+    .social {
+      width: 5rem;
+      .social-icon-link {
+        width: 100%;
+        display: block;
+        padding: 1rem;
+        transition: background .3s;
+        border-radius: 5px;
+        .social-icon {
+          width: 100%;
+        }
+      }
+    }
+}
 
 /* Efecto de escritura para el h1 */
 .typing-heading {
